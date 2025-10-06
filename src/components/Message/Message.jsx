@@ -3,15 +3,19 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import './Message.css'; 
 import { FaUser, FaRobot } from 'react-icons/fa'; 
+import geminiIcon from '../../assets/gemini-icon.png'; 
 
 const Message = ({ role, text }) => {
   const isUser = role === 'user';
-  const icon = isUser ? <FaUser /> : <FaRobot />;
-  const className = isUser ? 'user-message' : 'bot-message';
 
   return (
-    <div className={`message-container ${className}`}>
-      <div className="message-icon">{icon}</div>
+    <>
+
+    <div className={`message-wrapper ${isUser ? 'user-message' : 'bot-message'}`}>
+        {!isUser && (
+        <img src={geminiIcon} alt="Gemini" className="gemini-icon" />
+      )}
+      
       <div className="message-content">
         {isUser ? (
           <p>{text}</p>
@@ -21,6 +25,7 @@ const Message = ({ role, text }) => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

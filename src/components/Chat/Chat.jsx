@@ -41,8 +41,8 @@ function Chat() {
       <div className="chat-history">
         {messages.length === 0 ? (
           <div className="welcome-message">
-            <h1>Hello, I am a Gemini Clone!</h1>
-            <p>Ask me anything to start a conversation.</p>
+            <h1>Hello, Rashika</h1>
+            <p>What should we do today?</p>
           </div>
         ) : (
           messages.map((msg, index) => (
@@ -50,7 +50,7 @@ function Chat() {
           ))
         )}
         
-        {isLoading && <Message role="bot" text="Thinking..." />}
+        {isLoading && <Message role="bot" text="Just a sec..." />}
       </div>
 
      
@@ -58,7 +58,7 @@ function Chat() {
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter a prompt here..."
+          placeholder="Ask Gemini"
           rows="1"
           disabled={isLoading}
         />

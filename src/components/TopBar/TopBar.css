@@ -1,0 +1,54 @@
+.topbar {
+  width: 100%;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1919;
+  /* border-bottom: 1px solid #2a2a2a; */
+  box-sizing: border-box;
+}
+
+
+.topbar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.upgrade-btn {
+  background-color: #37393b;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upgrade-btn:hover {
+  background-color: #4a4b4d;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #808080;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}

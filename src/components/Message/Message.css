@@ -1,14 +1,27 @@
+.gemini-icon {
+  width: 20px;
+  height: 2opx;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.5));
+}
+.message-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
 
-.message-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 10px 0;
+.user-message {
+  justify-content: flex-end;
+}
+
+.bot-message {
+  justify-content: flex-start;
 }
 
 .message-icon {
     font-size: 20px;
-    padding: 8px;
+    padding: 3px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -23,6 +36,15 @@
 .bot-message .message-icon {
     background-color: #f0f0f0;
     color: #1e1e1e;
+}
+
+.bot-message .message-icon img {
+    padding: 0;           
+    border-radius: 0;     
+    background: none;    
+    width: 20px;         
+    height: 20px;
+    object-fit: contain;
 }
 
 .message-content {
